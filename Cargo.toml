@@ -1,5 +1,5 @@
 [package]
-name = "levenstein-rust-mr-tadeusz"
+name = "levenshtein-rust-mr-tadeusz"
 version = "0.1.0"
 authors = ["Tomasz Kogut <almendar ]at[ gmail>"]
 

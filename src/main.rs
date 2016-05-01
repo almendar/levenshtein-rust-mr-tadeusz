@@ -1,4 +1,4 @@
-mod levenstein;
+mod levenshtein;
 
 use std::fs::File;
 use std::path::Path;
@@ -47,7 +47,7 @@ fn print_fixed_word(word_to_fix: &String) {
     Ok(book) => {
       let words: HashSet<String> = split_to_words(&book);
       let mut computated_distances: Vec<(&String, usize)> = words.iter().map(
-        |x| (x, levenstein::distance(x, &word_to_fix.to_lowercase()))
+        |x| (x, levenshtein::distance(x, &word_to_fix.to_lowercase()))
       ).collect();
       computated_distances.sort_by_key(|&(_,y)| y);
       let best_five: Vec<&(&String, usize)> = computated_distances.iter().take(10).collect();

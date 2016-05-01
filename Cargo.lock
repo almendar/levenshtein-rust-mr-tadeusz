@@ -1,4 +1,4 @@
 [root]
-name = "levenstein"
+name = "levenshtein-rust-mr-tadeusz"
 version = "0.1.0"
 
