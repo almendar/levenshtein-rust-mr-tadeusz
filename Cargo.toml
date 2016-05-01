@@ -1,0 +1,6 @@
+[package]
+name = "levenstein"
+version = "0.1.0"
+authors = ["Tomasz Kogut <t.kogut@adform.com>"]
+
+[dependencies]
