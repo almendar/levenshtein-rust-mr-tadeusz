@@ -42,11 +42,7 @@ fn split_to_words(content: &str) -> HashSet<String> {
 }
 
 
-
-fn main() {
-  let mut args = env::args();
-  args.next();
-  let word_to_fix: String = args.next().unwrap();
+fn print_fixed_word(word_to_fix: &String) {
   match read() {
     Ok(book) => {
       let words: HashSet<String> = split_to_words(&book);
@@ -57,10 +53,22 @@ fn main() {
       let best_five: Vec<&(&String, usize)> = computated_distances.iter().take(10).collect();
       for top_word in best_five {
         println!("{}, {}", top_word.0, top_word.1);
-      }
-      ();
+      };
     },
-    Err(_) =>
-      ()
+    Err(_) => ()
   }
+}
+
+
+fn main() {
+  let mut args = env::args();
+  args.next();
+  match args.next() {
+    Some(word_to_fix) => print_fixed_word(&word_to_fix),
+    None => {
+      println!("Pass word as a cmd line argument to see nearest neighbours");
+      ();
+    }
+  };
+
 }
