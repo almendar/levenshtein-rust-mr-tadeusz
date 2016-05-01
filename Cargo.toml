@@ -1,6 +1,6 @@
 [package]
-name = "levenstein"
+name = "levenstein-rust-mr-tadeusz"
 version = "0.1.0"
-authors = ["Tomasz Kogut <t.kogut@adform.com>"]
+authors = ["Tomasz Kogut <almendar ]at[ gmail>"]
 
 [dependencies]
